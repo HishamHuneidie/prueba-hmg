@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block bodyinicio %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section">
+        <div class="cont-center">
+            <div class="cont-flex" data-inner="1">
+                <div class="item-flex">
+                    <p class="bx-titulo h2">Hola {{ controller_name }}</p>
+                </div>
+                <div class="item-flex">
+                    <ul class="lista-gestion-productos">
+                        {% for li in usuarios2 %}
+                            <li class="li-producto" id="li-chemise-preescolar">
+                                <span class="imagen">
+                                    {# <img src="http://uniformesshan.com/sources/img/productos/600dd6d5adb2c-1611519701694.jpg" alt="" class=""> #}
+                                </span>
+                                <span class="texto-normal">{{ li.email }}</span>
+                                <span class="texto-normal texto-doble"></span>
+                                <span class="li-botones">
+                                    <a href="{{ path('verusuario', { 'id': li.id }) }}" class="boton boton-pequeno">
+                                        <p>Ver usuario</p>
+                                    </a>
+                                    <a href="{{ path('confirmaborrarusuario', {id: li.id}) }}" class="boton boton-rojo boton-pequeno">
+                                        <p>Borrar usuario</p>
+                                    </a>
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block bodyfin %}
+    {{ parent() }}
+{% endblock %}

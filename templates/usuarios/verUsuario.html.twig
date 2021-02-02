@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block bodyinicio %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section">
+        <div class="cont-center">
+            <div class="cont-flex" data-inner="1">
+                <div class="item-flex">
+                    <p class="bx-titulo h2">Hola {{ controller_name }}</p>
+                    <p class="bx-parrafo h6">Modificando a {{ email }}</p>
+                </div>
+                <div class="item-flex">
+                    {% for message in app.flashes('exito') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    <div class="cont-form">
+                        {{ form(form) }}
+                        {# <form method="post">
+                            <div class="cont-campos">
+                                <input type="hidden" value="{{ usuario.id }}" placeholder="id" disabled>
+                            </div>
+                            <div class="cont-campos">
+                                <input type="text" value="{{ usuario.email }}" placeholder="id">
+                            </div>
+                            <div class="cont-campos">
+                                <input type="password" value="" placeholder="id">
+                            </div>
+                            <div class="cont-campos">
+                                <button type="submit">
+                                    Guardar
+                                </button>
+                            </div>
+                        </form> #}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block bodyfin %}
+    {{ parent() }}
+{% endblock %}

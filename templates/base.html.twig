@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset("css/style.css") }}">
+        {% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        {% block bodyinicio %}
+            <div class="todo" id="todo">
+                <div class="cont-menu">
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('dashboard') }}">
+                                        {# <img alt="Logo UniformesShan" src="blob:http://uniformesshan.com/69587ccf-02d5-4c2f-ae94-74985a7c9cd6" class="blur"> #}
+                                        <p>Hisham (Prueba HMG)</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul></ul>
+                            <ul>
+                                <li>
+                                    <a href="{{ path('dashboard') }}">
+                                        <p>Inicio</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('usuarios') }}">
+                                        <p>Usuarios</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('registrar') }}">
+                                        <p>Registrar</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_login') }}">
+                                        <p>Iniciar sesión</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="cont-body">
+                    <div class="container-sections">
+        {% endblock %}
+        {% block body %}
+        {% endblock %}
+        {% block bodyfin %}
+                    </div>
+                </div>
+                <div class="cont-footer"></div>
+            </div>
+        {% endblock %}
+    </body>
+</html>

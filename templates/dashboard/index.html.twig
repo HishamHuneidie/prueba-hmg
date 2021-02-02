@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block bodyinicio %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section">
+        <div class="cont-center">
+            <div class="cont-flex" data-inner="1">
+                <div class="item-flex">
+                    <p class="bx-titulo h2">Bienvenido!</p>
+                    <p class="bx-subtitulo">Entorno de pruebas symfony creado por Hisham Huneidie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block bodyfin %}
+    {{ parent() }}
+{% endblock %}

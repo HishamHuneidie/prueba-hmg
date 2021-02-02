@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashboardController!{% endblock %}
+
+{% block bodyinicio %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section">
+        <div class="cont-center">
+            <div class="cont-flex" data-inner="1">
+                <div class="item-flex">
+                    <p class="bx-titulo h2">Hola {{ controller_name }}</p>
+                </div>
+                <div class="item-flex">
+                    <div class="fondo-claro">
+                        {% for message in app.flashes('exito') %}
+                            <div class="alert alert-success">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                        {{ form(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block bodyfin %}
+    {{ parent() }}
+{% endblock %}
