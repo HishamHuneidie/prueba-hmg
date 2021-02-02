@@ -1,8 +1,8 @@
 # Entorno de pruebas
 
-El entorno está construído únicamente con el propósito de mostrar como se puede generar una app que gestione usuarios. Con esteentorno se pueden crear, borrar, modificar y listar usuarios. Estos a su vez tienen la posibilidad de iniciar sesión.
+El entorno está construído únicamente con el propósito de mostrar como se puede generar una app que gestione usuarios. Con este entorno se pueden crear, borrar, modificar y listar usuarios. Estos a su vez tienen la posibilidad de iniciar sesión.
 Todas las vistas están protegidas con usuario y contraseña.
-Creado en Symfony 4.4 y como base de datos se está utilizando la versión 10 de MariaDB
+Creado en Symfony 4.4 y como base de datos se está utilizando la versión 10 de MariaDB.
 
 # Los bundles instalados
   - security-bundle
@@ -24,7 +24,7 @@ Nota: se tenía pensado utilizar el FOSUserBundle pero en su lugar se ha utiliza
 | Modificar Usuario | /user/id-usuario | POST |
 
 
-# Creditos
+# Créditos
 
 Hisham Huneidie
 hhuneidie@gmail.com 
